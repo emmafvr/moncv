@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Form\LoisirType;
 use AppBundle\Entity\Loisirs;
+
 /**
  * @Route("/loisirs")
  */
@@ -36,7 +37,7 @@ class LoisirController extends Controller
     {
         $loisir = new Loisirs();
         $form = $this->createForm(LoisirType::class, $loisir);
-        $form->handleRequest($request); 
+        $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $eManager = $this->getDoctrine()->getManager();
             $eManager->persist($loisir);
@@ -72,7 +73,7 @@ class LoisirController extends Controller
         $eManager = $this->getDoctrine()->getManager();
         $loisir = $eManager->getRepository("AppBundle:Loisirs")->FindOneBy(["id" => $id]);
         $form = $this->createForm(LoisirType::class, $loisir);
-        $form->handleRequest($request); 
+        $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $eManager->persist($loisir);
             $eManager->flush();

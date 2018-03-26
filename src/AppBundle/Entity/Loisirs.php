@@ -11,34 +11,33 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="Loisirs")
  */
 
-class Loisirs {
-    
-  /**
-  * @ORM\Id
-  * @ORM\Column(type="integer")
-  * @ORM\GeneratedValue
-  */
+class Loisirs
+{
+    /**
+    * @ORM\Id
+    * @ORM\Column(type="integer")
+    * @ORM\GeneratedValue
+    */
   
-  protected $id;
+    protected $id;
     
-  /**
-   * @ORM\Column(type="string")
-   **/ 
-  protected $name;
+    /**
+     * @ORM\Column(type="string")
+     **/
+    protected $name;
     
     public function Getid()
-  {
-    return $this->id;
-  }
+    {
+        return $this->id;
+    }
   
-  public function Getname()
-  {
-    return $this->name;
-  }
+    public function Getname()
+    {
+        return $this->name;
+    }
   
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
 }

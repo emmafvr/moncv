@@ -11,10 +11,10 @@ use AppBundle\Entity\Formations;
 
 class DefaultController extends Controller
 {
-     /**
-     * @Route("/cv/{name}/{firstname}", name="homepage")
-     * @Template()
-     */
+    /**
+    * @Route("/cv/{name}/{firstname}", name="homepage")
+    * @Template()
+    */
     public function indexAction($name = 'Favre', $firstname='Emma')
     {
         $repo = $this->getDoctrine()->getRepository('AppBundle:Formations');
@@ -37,7 +37,8 @@ class DefaultController extends Controller
      * @Route("/insert", name="insert")
      * @Template()
      */
-    public function insertAction(){
+    public function insertAction()
+    {
         $form = new Formations();
         $form->setName('DUT Métiers du Multimédia et de l Internet');
         $form->Setlieu('IUT 1');
@@ -49,7 +50,6 @@ class DefaultController extends Controller
         $eManager->flush();
         
         return array();
-        
     }
     
     /**
