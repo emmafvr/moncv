@@ -1,0 +1,8 @@
+[12-Feb-2018 07:24:34 UTC] PHP Fatal error:  Class 'AppBundle\Controller\Formations' not found in /home/ubuntu/workspace/src/AppBundle/Controller/DefaultController.php on line 34
+[12-Feb-2018 07:24:34 UTC] PHP Stack trace:
+[12-Feb-2018 07:24:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/web/app_dev.php:0
+[12-Feb-2018 07:24:34 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/web/app_dev.php:29
+[12-Feb-2018 07:24:34 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:202
+[12-Feb-2018 07:24:34 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/var/cache/dev/classes.php:4314
+[12-Feb-2018 07:24:34 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/var/cache/dev/classes.php:4359}() /home/ubuntu/workspace/var/cache/dev/classes.php:4359
+[12-Feb-2018 07:24:34 UTC] PHP   6. AppBundle\Controller\DefaultController->insertAction() /home/ubuntu/workspace/var/cache/dev/classes.php:4359
