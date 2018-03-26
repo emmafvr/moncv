@@ -6,7 +6,7 @@ security:
     providers:
         in_memory:
             memory: 
-                users :
+                users:
                     emma:
                         password: pass
                         roles: 'ROLE_ADMIN'
