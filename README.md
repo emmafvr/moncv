@@ -7,7 +7,7 @@ Voici mon CV en ligne créé avec Symfony !
 Le but est d'ajouter, de modifier ou de supprimer une expérience, une formation ou un loisir. 
 ![Capture](/experiences.JPG) ![Capture](/formations.JPG) ![Capture](/loisirs.JPG)
 
-Mais, seul les personnes qui sont authentifiées peuvent accéder à ces modifications. 
+Mais, seul les personnes qui sont authentifiées peuvent accéder à ces modifications.                    
 ![Capture](/admin.JPG)
 
 Elles sont alors redirigées par sur ce  type de formulaire.
