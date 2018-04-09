@@ -1,0 +1,7 @@
+<html>
+    <body>
+        <h3>Édition de la formation {{entity.Getname}}</h3>
+        {{ form_start(form, {'action': path('validate_edit_formation', {'id' : entity.Getid()})} ) }}
+        {{ form(form) }}
+    </body>
+</html>
