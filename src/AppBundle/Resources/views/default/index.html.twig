@@ -354,54 +354,30 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <div class="section-title"><h2>EXPERIENCE DE TRAVAIL</h2></div>
+                <div class="section-title"><h2>EXPERIENCE</h2>
+                <a href="{{ path('create_experience') }}">Ajouter</a>
+                </div>
             </div>
             <div class="col-md-9">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="content-item">
-                            <small>2015 - Present</small>
-                            <h3>Senior Developer</h3>
-                            <h4>Computer & Motor Ltd.</h4>
-
-                            <p>United Kingdom, London</p>
+                        {% for experience in experiences %}
+                         <div class="profile-item">
+                            <div class="media">
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="content-item">
+                                            <small>{{ experience.Getdatedebut()|date("Y") }} - {{ experience.Getdatefin()|date("Y")}}</small>
+                                            <h3>{{ experience.GetName() }}</h3>
+                                            <h4>{{ experience.Getlieu() }}</h4>
+                                            <p></p>
+                                            <a href="{{ path('edit_experience', {'id' : experience.id}) }}">Modifier</a> |
+                                            <a href="{{ path('remove_experience', {'id' : experience.id}) }}">Supprimer</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- .experience-item -->
-                    </div>
-                    <div class="col-md-6">
-                        <div class="content-item">
-                            <small>2012 - 2015</small>
-                            <h3>Webdesigner</h3>
-                            <h4>BizzNiss</h4>
-
-                            <p>United Kingdom, London</p>
-                        </div>
-                        <!-- .experience-item -->
-                    </div>
-                </div>
-                <div class="row">
-
-                    <div class="col-md-6">
-                        <div class="content-item">
-                            <small>2012 - 2015</small>
-                            <h3>Web Developer</h3>
-                            <h4>Unique Soft</h4>
-
-                            <p>United Kingdom, London</p>
-                        </div>
-                        <!-- .experience-item -->
-                    </div>
-                    <div class="col-md-6">
-                        <div class="content-item">
-                            <small>2010 - 2012</small>
-                            <h3>Front-end Developer</h3>
-                            <h4>Somsom LLC</h4>
-
-                            <p>United Kingdom, London</p>
-                        </div>
-                        <!-- .experience-item -->
-                    </div>
-                </div>
+                        {% endfor %}
+                <!--.row-->
             </div>
             <!--.row-->
         </div>
@@ -419,14 +395,12 @@
 
             <div class="col-md-9">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         {% for Formations in formations %}
                             <div class="content-item">
                                 <small>{{ Formations.Getdatedebut()|date("Y") }} - {{ Formations.Getdatefin()|date("Y")}}</small>
                                 <h3>{{ Formations.GetName() }}</h3>
                                 <h4>{{ Formations.Getlieu() }}</h4>
-                            
-                                <p>Grenoble, France</p>
                             </div>
                         {% endfor %}
                         

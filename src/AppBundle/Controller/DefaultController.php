@@ -21,8 +21,10 @@ class DefaultController extends Controller
         $formations = $repo->findAll();
         $repo = $this->getDoctrine()->getRepository('AppBundle:Loisirs');
         $loisirs = $repo->findAll();
+        $repo = $this->getDoctrine()->getRepository('AppBundle:Experiences');
+        $experiences = $repo->findAll();
         
-        return array('name' => $name, 'firstname' => $firstname, 'formations'=>$formations, 'loisirs'=>$loisirs);
+        return array('name' => $name, 'firstname' => $firstname, 'formations'=>$formations, 'loisirs'=>$loisirs, 'experiences'=>$experiences);
     }
     /**
      * @Route("/emma", name="emma")
